@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { stripHtml } from "string-strip-html";
+import stripHtml  from 'cli-strip-html'
+import '../css/items.css'
 
 const Items = ({ product }) => {
 

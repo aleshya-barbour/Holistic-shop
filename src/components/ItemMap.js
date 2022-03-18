@@ -7,21 +7,21 @@ import Items from './Items'
 const ItemMap = ({ products }) => {
 
   return (
+    
     <div className='itemsMap'>
-      { products.map((product) => (
-        <Items
-          key= {product.id} 
-          product= {product}
-
-        />
-
-      ))}
+      { products.map((product) =>(
+            <Items
+              key={product.id}
+              product={product}
+              
+            />
+          ))}
 
     
     </div>
-  )
+  )  
 }
-Items.propTypes = {
+ItemMap.propTypes = {
   products: PropTypes.array,
 };
 

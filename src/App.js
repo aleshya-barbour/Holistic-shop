@@ -24,7 +24,8 @@ const App = () => {
 
     return (
       <div className="app">
-        <ItemMap />
+        <ItemMap
+          products={products} />
       </div>
     );
   
