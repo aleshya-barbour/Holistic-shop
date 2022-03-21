@@ -4,15 +4,17 @@ import PropTypes from 'prop-types'
 import Items from './Items'
 
 
-const ItemMap = ({ products }) => {
+const ItemMap = ({ products, onAddToCart}) => {
 
   return (
     
     <div className='itemsMap'>
+    
       { products.map((product) =>(
             <Items
               key={product.id}
               product={product}
+              onAddToCart={onAddToCart}
               
             />
           ))}

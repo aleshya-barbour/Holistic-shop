@@ -5,9 +5,11 @@ import ItemMap from './components/ItemMap';
 const App = () => {
   //create stateful component
   const [products, setProducts] = useState([]);
-
+  const [cart, setCart] = useState([]);
+  
   useEffect(() => {
     fetchProducts()
+    fetchCart()
   }, [])
 
   //create a function that fetches
@@ -21,11 +23,30 @@ const App = () => {
     })
   }
 
+  const fetchCart = () => {
+    commerce.cart.retrieve().then((cart) => {
+      setCart(cart)
+    }).catch((error) => {
+      console.log('There was an error while retrieving cart', error)
+    })
+  }
+
+  const handleAddToCart =(productId,quantity) => {
+    commerce.cart.add(productId, quantity).then ((item) => {
+      setCart(item.cart)
+    }).catch((error) => {
+      console.error('There was an error while adding items to cart', error)
+    })
+  }
+
 
     return (
       <div className="app">
         <ItemMap
-          products={products} />
+          products={products}
+          onAddToCart={handleAddToCart} 
+          />
+          
       </div>
     );
   
