@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import { commerce } from './lib/commerce';
 import ItemMap from './components/ItemMap';
+import CartNav from './components/CartNav';
 
 const App = () => {
   //create stateful component
@@ -39,6 +40,14 @@ const App = () => {
     })
   }
 
+  const handleUpdateCartQty = (lineItemId, quantity) => {
+    commerce.cart.update(lineItemId, { quantity}).then((resp) => {
+      setCart(resp.cart)
+    }).catch((error) => {
+      console.log('There was an error while updating your cart items', error)
+    })
+  }
+
 
     return (
       <div className="app">
@@ -46,7 +55,11 @@ const App = () => {
           products={products}
           onAddToCart={handleAddToCart} 
           />
-          
+
+        <CartNav
+          cart={cart}
+          onUpdateCartQty={handleUpdateCartQty}
+        />
       </div>
     );
   

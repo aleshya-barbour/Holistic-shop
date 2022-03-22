@@ -1,7 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import CartItem from './CartItem'
 
-const Cart = ({cart}) => {
+const Cart = ({cart, onEmptyCart, onUpdateCartQty }) => {
 
   const handleEmptyCart = () => {
     onEmptyCart();
@@ -24,7 +25,10 @@ const Cart = ({cart}) => {
     cart.line_items.map((lineItem) => (
       <CartItem
         item={lineItem}
+        onUpdateCartQty={onUpdateCartQty}
+        onRemoveFromCart={onRemoveFromCart}
         key={lineItem.id}
+
         className="cart-inner"
       />
     ))
