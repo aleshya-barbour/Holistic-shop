@@ -6,36 +6,47 @@ import { BsCart4 } from 'react-icons/bs';
 import { FaRegTimesCircle } from 'react-icons/fa';
 import Cart from './Cart';
 
-const CartNav = ({cart, onUpdateCartQty, onRemoveFromCart }) => {
+const CartNav = ({cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) => {
   const [isCartVisible, setCartVisible] = useState(false)
 
-  const renderOpenButton = () => {
-    <button className='nav-cart-btn--open'>
-      <BsCart4 size="2x" color="#292B83" />
-      {cart!==null ? <span>{cart.total_items}</span> : ''}
-    </button>
-  }
-  const renderCloseButton = () => (
-    <button>
-      <FaRegTimesCircle size="1x" color='red' />
-    </button>
+return (
+  <div className='cart-nav'>
+    <div className="nav__cart" onClick={() => setCartVisible(!isCartVisible)}>
+      {!isCartVisible ? (
+        <button className='nav-cart-btn--open'>
+          <BsCart4 
+          color='red' />
+          {cart!== null ? <span>{cart.total_items}</span> : ''}
+        </button>
 
-  )
-  return (
-    <div>
-      <div className='cart-nav' onClick={() => setCartVisible(!isCartVisible)}>
-        {!isCartVisible ? renderOpenButton() : renderCloseButton() }
+      ) : (
+        <button>
+        <FaRegTimesCircle  />
+      </button>
+
+      )}
 
       </div>
       { isCartVisible &&
         <Cart
           cart={cart}
           onUpdateCartQty={onUpdateCartQty}
+          onRemoveFromCart={onRemoveFromCart}
+          onEmptyCart={onEmptyCart}
         />
         
       }
     </div>
-  )
+   
+)
 }
 
+
 export default CartNav
+
+// CartNav.propTypes = {
+//   cart: PropTypes.object,
+//   onUpdateCartQty: PropTypes.func,
+//   onRemoveFromCart: PropTypes.func,
+//   onEmptyCart: PropTypes.func,
+// };

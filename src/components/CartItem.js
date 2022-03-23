@@ -27,7 +27,7 @@ const CartItem = ({ item, onUpdateCartQty, onRemoveFromCart }) => {
       </div>
       <button
         className='cart-item-remove'
-        onClick={ handleRemoveFromCart }
+        onClick= { handleRemoveFromCart }
         >
         Remove
       </button>

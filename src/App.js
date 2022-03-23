@@ -48,18 +48,34 @@ const App = () => {
     })
   }
 
-
+  const handleRemoveFromCart =(lineItemId) => {
+    commerce.cart.remove(lineItemId).then((resp) => {
+      setCart(resp.cart)
+    }).catch((error) => {
+      console.error('There was an error while removing item from cart', error)
+    })
+  }
+  const handleEmptyCart = () => {
+    commerce.cart.empty().then((resp) => {
+      setCart(resp.cart)
+    }).catch((error) => {
+      console.error('There was an error emptying the cart', error)
+    })
+  }
     return (
+
       <div className="app">
+ 
+        <CartNav
+          cart={cart}
+          onUpdateCartQty={handleUpdateCartQty}
+          onRemoveFromCart={handleRemoveFromCart}
+          onEmptyCart={handleEmptyCart}
+        />
         <ItemMap
           products={products}
           onAddToCart={handleAddToCart} 
           />
-
-        <CartNav
-          cart={cart}
-          onUpdateCartQty={handleUpdateCartQty}
-        />
       </div>
     );
   

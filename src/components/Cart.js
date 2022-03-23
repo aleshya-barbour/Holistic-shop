@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import CartItem from './CartItem'
 
-const Cart = ({cart, onEmptyCart, onUpdateCartQty }) => {
+const Cart = ({cart, onEmptyCart, onUpdateCartQty, onRemoveFromCart }) => {
 
   const handleEmptyCart = () => {
     onEmptyCart();
@@ -50,7 +50,7 @@ const Cart = ({cart, onEmptyCart, onUpdateCartQty }) => {
     { renderTotal () }
 
     <div className='cart-footer'>
-      <button className='cart-btn-empty'>Empty Cart</button>
+      <button className='cart-btn-empty'onClick={handleEmptyCart}>Empty Cart</button>
       <button className='cart-btn-checkout'>Checkout</button>
     </div>
 
