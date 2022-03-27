@@ -1,5 +1,35 @@
 .itemImg {
-  width: 10em;
-  height: auto;
   
+  width: 11em;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  width: fit-content;
+}
+
+.itemCard {
+  display: block;
+ 
+  padding: 6em;
+
+width: 10em;
+  background-color: rgb(192, 219, 229);
+  margin: 10em;
+  border: 1px solid rgb(22, 22, 29);
+
+
+  
+
+}
+
+.buyButton {
+  background-color: rgb(241, 239, 81);
+  padding: 1em;
 }

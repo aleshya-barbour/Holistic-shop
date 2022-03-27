@@ -51,7 +51,7 @@ const Cart = ({cart, onEmptyCart, onUpdateCartQty, onRemoveFromCart }) => {
 
     <div className='cart-footer'>
       <button className='cart-btn-empty'onClick={handleEmptyCart}>Empty Cart</button>
-      <button className='cart-btn-checkout'>Checkout</button>
+      <button className='cart-btn-checkout' to='/checkout'>Checkout</button>
     </div>
 
       

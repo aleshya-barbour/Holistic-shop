@@ -1,16 +1,21 @@
 import React, { useState, useEffect} from 'react';
+import { Routes, Route, Link } from "react-router-dom";
 import { commerce } from './lib/commerce';
+import { BsCart4 } from 'react-icons/bs';
 import ItemMap from './components/ItemMap';
 import CartNav from './components/CartNav';
+import Hero from './components/Hero'
 
 const App = () => {
   //create stateful component
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  // const [mercchant, setMerchant] = useState([]);
   
   useEffect(() => {
     fetchProducts()
     fetchCart()
+    // fetchMerchant()
   }, [])
 
   //create a function that fetches
@@ -62,20 +67,37 @@ const App = () => {
       console.error('There was an error emptying the cart', error)
     })
   }
+  // <nav>
+  //   <Link exactpath to='./components/CartNav'><BsCart4 /></Link>
+  // </nav>
     return (
 
       <div className="app">
- 
+    
+       {/* <Routes>
+       <Route path='CartNav' element = { */}
         <CartNav
           cart={cart}
           onUpdateCartQty={handleUpdateCartQty}
           onRemoveFromCart={handleRemoveFromCart}
           onEmptyCart={handleEmptyCart}
         />
-        <ItemMap
+      {/* }  */}
+      <Hero />
+        {/* />
+       <Route path='ItemMap' element = */}
+       <ItemMap
           products={products}
           onAddToCart={handleAddToCart} 
           />
+        {/* }
+       />
+        </Routes> */}
+
+        <footer>
+          Holistic Shop Created By Aleshya Barbour 2022
+        </footer>
+
       </div>
     );
   
