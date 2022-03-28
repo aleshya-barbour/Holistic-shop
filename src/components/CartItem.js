@@ -1,20 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import '../css/cartitem.css'
 
 const CartItem = ({ item, onUpdateCartQty, onRemoveFromCart }) => {
+
   const handleUpdateCartQty = (lineItemId, quantity) => {
     onUpdateCartQty(lineItemId, quantity)
-
-
   }
 
   const handleRemoveFromCart = () => {
     onRemoveFromCart(item.id)
   }
+
   return (
     
     <div className='cart-item'>
-      <img src={item.image.url} alt={item.name} />
+      <img classname='img' src={item.image.url} alt={item.name} />
 
       <div>
         <h4>{item.name}</h4>

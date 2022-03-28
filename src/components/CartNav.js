@@ -7,6 +7,7 @@ import { FaRegTimesCircle } from 'react-icons/fa';
 import Cart from './Cart';
 
 const CartNav = ({cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) => {
+
   const [isCartVisible, setCartVisible] = useState(false)
 
 return (
@@ -17,14 +18,16 @@ return (
           <BsCart4 
           size='25px'
         
-          color='red' />
+          color='white' />
           {cart!== null ? <span>{cart.total_items}</span> : ''}
         </button>
 
       ) : (
-        <button>
-        <FaRegTimesCircle  />
-      </button>
+        <button className='close-bttn'>
+          <FaRegTimesCircle  
+          size='25px'
+          color='red'/>
+        </button>
 
       )}
 

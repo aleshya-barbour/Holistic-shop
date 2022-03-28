@@ -1,0 +1,14 @@
+.cart-item{
+  display: flex;
+  flex-direction: column;
+  
+
+}
+
+.img {
+
+  width: 2em;
+
+
+}
+

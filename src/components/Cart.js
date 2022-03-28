@@ -1,8 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import CartItem from './CartItem'
+import CartItem from './CartItem';
+import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
+
 
 const Cart = ({cart, onEmptyCart, onUpdateCartQty, onRemoveFromCart }) => {
+
 
   const handleEmptyCart = () => {
     onEmptyCart();
@@ -20,6 +23,8 @@ const Cart = ({cart, onEmptyCart, onUpdateCartQty, onRemoveFromCart }) => {
       </p>
     )
   }
+
+
 
   const renderItems = () => (
     cart.line_items.map((lineItem) => (
@@ -41,6 +46,7 @@ const Cart = ({cart, onEmptyCart, onUpdateCartQty, onRemoveFromCart }) => {
   </div>
 
   }
+
   return (
     <div className='cart'>
       
@@ -51,7 +57,13 @@ const Cart = ({cart, onEmptyCart, onUpdateCartQty, onRemoveFromCart }) => {
 
     <div className='cart-footer'>
       <button className='cart-btn-empty'onClick={handleEmptyCart}>Empty Cart</button>
-      <button className='cart-btn-checkout' to='/checkout'>Checkout</button>
+      <button 
+ 
+      className='cart-btn-checkout' 
+      to='/checkout'
+      >
+        Checkout
+      </button>
     </div>
 
       
