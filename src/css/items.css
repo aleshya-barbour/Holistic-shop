@@ -9,19 +9,21 @@
 
 .items {
   display: flex;
-
-  flex-direction: column;
-  justify-content: space-between;
+  background-color: antiquewhite;
+  flex-direction: row;
+ 
  
 
 }
 
 .itemCard {
   padding: 5em;
+  padding-bottom: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: auto;
+  margin-bottom: 1em;
   width: 10em;
   background-color: rgb(241, 226, 226);
 

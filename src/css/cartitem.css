@@ -1,14 +1,40 @@
 .cart-item{
   display: flex;
   flex-direction: column;
+  background-color:rgb(255, 255, 255);
   
 
 }
 
-.img {
-
-  width: 2em;
+img {
+ display: flex;
 
 
 }
+
+.cart-item-remove {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  padding: .5em;
+  background-color: rgb(255, 255, 255);
+  border: 1px;
+ 
+}
+
+.plus-minus {
+  display: flex;
+ background-color: rgb(255, 255, 255);
+ padding: 1em;
+}
+
+.minus {
+  display: flex;
+  justify-content: center;
+  padding: 1.5em;
+  background-color: rgb(97, 183, 223);
+  border: 1px;
+  border-radius: 100px;
+}
+
 

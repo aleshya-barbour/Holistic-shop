@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 .hero {
   padding: 7em;
-  margin: .5em;
+  margin: .3em;
   color: aliceblue;
   background-color: #326417;
   display: flex;
@@ -11,10 +11,7 @@
   padding-top: 5em;
   padding-left: 4em;
 }
-.pic {
-  size: 12em;
 
-}
 h1 {
   font-size: 3em;
   font-family: "Dela Gothic One" ;
@@ -23,5 +20,7 @@ h1 {
   justify-content: baseline;
   
 }
+
+
 
 
