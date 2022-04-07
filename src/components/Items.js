@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import stripHtml  from 'cli-strip-html'
 import '../css/items.css'
+import { Button, Row, Col } from 'react-bootstrap'
 
 const Items = ({ product, onAddToCart }) => {
 
@@ -14,19 +15,25 @@ const handleAddToCart = () => {
 }
   return (
 
-    <div className='items'>
+    <Row>
+      <Col>
       <div className='itemCard'>
         <img className='itemImg' src={product.image.url} alt={product.name} />
         <h4 className='productName'>{product.name}</h4>
         <p className='productDiscription'>{result}</p> 
         <p className='productPrice'>{product.price.formatted_with_symbol}</p>
-        <button
-          className='buyButton'
-          onClick={handleAddToCart}
-          >Buy
-        </button>
+        
+          <Col style={{ textAlign: "right" }}>
+            <Button
+               variant='primary'
+               onClick={handleAddToCart}
+            >Buy
+            </Button>
+          </Col>
+   
       </div>
-    </div>
+      </Col>
+    </Row>
   )
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import Home from './components/Home'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './app.css'
 import {
  
@@ -12,7 +13,6 @@ import Checkout from './pages/Checkout';
 const App = () => {
 
     return (
-     
       <div className="app">
       <Routes>
         <Route exact path='/' element={<Home />} />

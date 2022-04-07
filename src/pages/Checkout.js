@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+
 import { useEffect } from 'react';
 import { commerce } from '../lib/commerce';
 
@@ -63,7 +64,44 @@ const Checkout = () => {
   useEffect(() => {
      // Each of the following looks for an entry in a field and, if there is one, updates the corresponding hook
     cardState.cardNum
-  })
+      ? handleFormChange(cardState.cardNum)
+      : handleFormChange("")
+    cardState.expDate
+      ?handleDateChange(cardState.expDate)
+      : handleDateChange("");
+    cardState.cvv
+      ?handleCvvChange(cardState.cvv)
+      : handleCvvChange("")
+    cardState.cardName
+      ? setName(cardState.cardName)
+      : setName("")
+    cardState.buyerFirstName
+      ? setBuyerFirstName(cardState. buyerFirstName)
+      : setBuyerFirstName("")
+    cardState.buyerLastName
+      ? setBuyerLastName(cardState.buyerLastName)
+      : setBuyerLastName("")
+    cardState.email
+      ? setEmail(cardState.email)
+      : setEmail("")
+    cardState.address 
+      ? setAddress(cardState.address)
+      : setAddress("")
+    cardState.city
+      ? setCity(cardState.city)
+      : setCity("")
+    cardState.geoState
+      ? setGeoState(cardState.geoState)
+      : setGeoState("")
+    cardState.zipCode
+    ? setZipCode(cardState.zipCode)
+    : setZipCode("")
+  }, [cardState]);
+
+  useEffect(() => {
+    const currentCard = findCardType(cardNum)
+    setCardType(currentCard)
+  }, [cardNum])
   
   const executeCheckout = (checkoutToken) => {
     commerce.checkout
