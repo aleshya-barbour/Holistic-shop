@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+
 import '../css/cartnav.css'
 
 import { BsCart4 } from 'react-icons/bs';

@@ -1,11 +1,4 @@
-.itemImg {
-  
-  width: 11em;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  
-}
+
 
 .items {
   display: flex;
@@ -16,7 +9,7 @@
 
 }
 
-.itemCard {
+/* .itemCard {
   padding: 5em;
   padding-bottom: 1em;
   display: flex;
@@ -25,16 +18,10 @@
   margin: auto;
   margin-bottom: 1em;
   width: 10em;
-  background-color: rgb(241, 226, 226);
-
-  border: 6px solid rgb(22, 22, 29);
+  
  
  
-}
-
-.buyButton {
-  background-color: rgb(241, 239, 81);
-  padding: 1em;
-}
+ 
+} */
 
 
