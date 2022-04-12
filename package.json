@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "@chec/commerce.js": "^2.8.0",
+    "@fortawesome/fontawesome-free": "^6.1.1",
     "@react-spring/web": "^9.4.4",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",

@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
-import {useSpring, animated} from "react-spring";
+import props from 'prop-types';
+import { animated, useSpring } from '@react-spring/web'
 import { Row, Form, Card, Col } from "react-bootstrap";
 import FormElement from "./FormElement";
 

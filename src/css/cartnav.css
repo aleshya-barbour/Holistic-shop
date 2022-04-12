@@ -23,7 +23,6 @@
 .nav__cart {
   display: flex;
   justify-content: flex-end;
-  background-image: url('https://images.unsplash.com/photo-1428908728789-d2de25dbd4e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNsb3Vkc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60');
-  background-color: rgb(197, 238, 210);
+  background-color: rgb(127, 191, 221);
 }
 

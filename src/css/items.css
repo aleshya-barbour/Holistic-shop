@@ -1,27 +1,20 @@
 
 
 .items {
-  display: flex;
+  display: grid;
   background-color: antiquewhite;
   flex-direction: row;
+
  
  
 
 }
 
-/* .itemCard {
-  padding: 5em;
+.itemCard {
+
+  padding-left: 30%;
   padding-bottom: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto;
-  margin-bottom: 1em;
-  width: 10em;
-  
- 
- 
- 
-} */
+  display: grid; 
+}
 
 
