@@ -7,7 +7,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Checkout from './pages/Checkout';
+import Checkout from './pages/Checkout'
 
 
 const App = () => {

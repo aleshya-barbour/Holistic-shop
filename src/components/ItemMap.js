@@ -8,7 +8,7 @@ const ItemMap = ({ products, onAddToCart}) => {
 
   return (
     
-    <div className='itemsMap'>
+    <div className='itemsMap' id='products'>
     
       { products.map((product) =>(
             <Items

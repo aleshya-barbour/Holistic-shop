@@ -2,8 +2,8 @@
 .hero {
   padding: 12em;
   margin: .3em;
-  color: aliceblue;
-  background-color: #326417;
+  color: rgb(31, 32, 32);
+  background-color: aliceblue;
   display: flex;
   justify-content: center;
 }
