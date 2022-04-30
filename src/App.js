@@ -8,6 +8,7 @@ import {
   Route,
 } from "react-router-dom";
 import Checkout from './pages/Checkout'
+import Cart from './components/Cart';
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       <Routes>
         <Route exact path='/' element={<Home />} />
         <Route exact path='checkout' element={<Checkout />} />
+        {/* add cart={Cart} to checkout */}
       </Routes>
 
         <footer>
